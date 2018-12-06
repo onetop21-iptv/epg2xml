@@ -517,6 +517,14 @@ try:
         default_episode = Settings['default_episode'] if 'default_episode' in Settings else 'y'
         default_verbose = Settings['default_verbose'] if 'default_verbose' in Settings else 'n'
         default_xmltvns = Settings['default_xmltvns'] if 'default_xmltvns' in Settings else 'n'
+	
+    if not MyChannels:
+        with open('playlist.m3u') as f:
+            buf = f.read()
+            m3ulines = buf.split('\n')
+            for line in m3ulines:
+                if line.startswith('#EXTINF'): MyChannels += '%s,' % line.split(' ')[1].replace('tvg-id="','').replace('"','')
+
 except EnvironmentError:
     printError("epg2xml." + JSON_FILE_ERROR)
     sys.exit()
