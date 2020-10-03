@@ -1216,4 +1216,163 @@ if not any(conf['WAVVE_more_details'] in s for s in 'yn'):
 else:
     wavve_more_details = conf['WAVVE_more_details'] == 'y'
 
+<<<<<<< HEAD
+=======
+Settingfile = os.path.dirname(os.path.abspath(__file__)) + '/epg2xml.json'
+ChannelInfos = []
+try:
+    with open(Settingfile) as f: # Read Channel Information file
+        Settings = json.load(f)
+        MyISP = Settings['MyISP'] if 'MyISP' in Settings else 'ALL'
+        MyChannels = Settings['MyChannels'] if 'MyChannels' in Settings else ''
+        default_output = Settings['output'] if 'output' in Settings else 'd'
+        default_xml_file = Settings['default_xml_file'] if 'default_xml_file' in Settings else 'xmltv.xml'
+        default_xml_socket = Settings['default_xml_socket'] if 'default_xml_socket' in Settings else 'xmltv.sock'
+        default_icon_url = Settings['default_icon_url'] if 'default_icon_url' in Settings else None
+        default_fetch_limit = Settings['default_fetch_limit'] if 'default_fetch_limit' in Settings else '2'
+        default_rebroadcast = Settings['default_rebroadcast'] if 'default_rebroadcast' in Settings else 'y'
+        default_episode = Settings['default_episode'] if 'default_episode' in Settings else 'y'
+        default_verbose = Settings['default_verbose'] if 'default_verbose' in Settings else 'n'
+        default_xmltvns = Settings['default_xmltvns'] if 'default_xmltvns' in Settings else 'n'
+	
+    if not MyChannels:
+        with open('playlist.m3u') as f:
+            buf = f.read()
+            m3ulines = buf.split('\n')
+            for line in m3ulines:
+                if line.startswith('#EXTINF'): MyChannels += '%s,' % line.split(' ')[1].replace('tvg-id="','').replace('"','')
+
+except EnvironmentError:
+    printError("epg2xml." + JSON_FILE_ERROR)
+    sys.exit()
+except ValueError:
+    printError("epg2xml." + JSON_SYNTAX_ERROR)
+    sys.exit()
+
+parser = argparse.ArgumentParser(description = 'EPG 정보를 출력하는 방법을 선택한다')
+argu1 = parser.add_argument_group(description = 'IPTV 선택')
+argu1.add_argument('-i', dest = 'MyISP', choices = ['ALL', 'KT', 'LG', 'SK'], help = '사용하는 IPTV : ALL, KT, LG, SK', default = MyISP)
+argu2 = parser.add_mutually_exclusive_group()
+argu2.add_argument('-v', '--version', action = 'version', version = '%(prog)s version : ' + __version__)
+argu2.add_argument('-d', '--display', action = 'store_true', help = 'EPG 정보 화면출력')
+argu2.add_argument('-o', '--outfile', metavar = default_xml_file, nargs = '?', const = default_xml_file, help = 'EPG 정보 저장')
+argu2.add_argument('-s', '--socket', metavar = default_xml_socket, nargs = '?', const = default_xml_socket, help = 'xmltv.sock(External: XMLTV)로 EPG정보 전송')
+argu3 = parser.add_argument_group('추가옵션')
+argu3.add_argument('--icon', dest = 'icon', metavar = "http://www.example.com/icon", help = '채널 아이콘 URL, 기본값: '+ default_icon_url, default = default_icon_url)
+argu3.add_argument('-l', '--limit', dest = 'limit', type=int, metavar = "1-7", choices = range(1,8), help = 'EPG 정보를 가져올 기간, 기본값: '+ str(default_fetch_limit), default = default_fetch_limit)
+argu3.add_argument('--rebroadcast', dest = 'rebroadcast', metavar = 'y, n', choices = 'yn', help = '제목에 재방송 정보 출력', default = default_rebroadcast)
+argu3.add_argument('--episode', dest = 'episode', metavar = 'y, n', choices = 'yn', help = '제목에 회차 정보 출력', default = default_episode)
+argu3.add_argument('--verbose', dest = 'verbose', metavar = 'y, n', choices = 'yn', help = 'EPG 정보 추가 출력', default = default_verbose)
+
+args = parser.parse_args()
+if args.MyISP : MyISP = args.MyISP
+if args.display :
+    default_output = "d"
+elif args.outfile :
+    default_output = "o"
+    default_xml_file = args.outfile
+elif args.socket :
+    default_output = "s"
+    default_xml_socket = args.socket
+if args.icon : default_icon_url = args.icon
+if args.limit : default_fetch_limit = args.limit
+if args.rebroadcast : default_rebroadcast = args.rebroadcast
+if args.episode : default_episode = args.episode
+if args.verbose : default_verbose = args.verbose
+
+if MyISP:
+    if not any(MyISP in s for s in ['ALL', 'KT', 'LG', 'SK']):
+        printError("MyISP는 ALL, KT, LG, SK만 가능합니다.")
+        sys.exit()
+else :
+    printError("epg2xml.json 파일의 MyISP항목이 없습니다.")
+    sys.exit()
+
+if default_output :
+    if any(default_output in s for s in ['d', 'o', 's']):
+        if default_output == "d" :
+            output = "display";
+        elif default_output == "o" :
+            output = "file";
+        elif default_output == 's' :
+            output = "socket";
+    else :
+        printError("default_output는 d, o, s만 가능합니다.")
+        sys.exit()
+else :
+    printError("epg2xml.json 파일의 output항목이 없습니다.");
+    sys.exit()
+
+IconUrl = default_icon_url
+
+if default_rebroadcast :
+    if not any(default_rebroadcast in s for s in ['y', 'n']):
+        printError("default_rebroadcast는 y, n만 가능합니다.")
+        sys.exit()
+    else :
+        addrebroadcast = default_rebroadcast
+else :
+    printError("epg2xml.json 파일의 default_rebroadcast항목이 없습니다.");
+    sys.exit()
+
+if default_episode :
+    if not any(default_episode in s for s in ['y', 'n']):
+        printError("default_episode는 y, n만 가능합니다.")
+        sys.exit()
+    else :
+        addepisode = default_episode
+else :
+    printError("epg2xml.json 파일의 default_episode항목이 없습니다.");
+    sys.exit()
+
+if default_verbose :
+    if not any(default_verbose in s for s in ['y', 'n']):
+        printError("default_verbose는 y, n만 가능합니다.")
+        sys.exit()
+    else :
+        addverbose = default_verbose
+else :
+    printError("epg2xml.json 파일의 default_verbose항목이 없습니다.");
+    sys.exit()
+
+if default_xmltvns :
+    if not any(default_xmltvns in s for s in ['y', 'n']):
+        printError("default_xmltvns는 y, n만 가능합니다.")
+        sys.exit()
+    else :
+        addxmltvns = default_xmltvns
+else :
+    printError("epg2xml.json 파일의 default_verbose항목이 없습니다.");
+    sys.exit()
+
+if default_fetch_limit :
+    if not any(str(default_fetch_limit) in s for s in ['1', '2', '3', '4', '5', '6', '7']):
+        printError("default_fetch_limit 는 1, 2, 3, 4, 5, 6, 7만 가능합니다.")
+        sys.exit()
+    else :
+        period = int(default_fetch_limit)
+else :
+    printError("epg2xml.json 파일의 default_fetch_limit항목이 없습니다.");
+    sys.exit()
+
+if output == "file" :
+    if default_xml_file :
+        sys.stdout = codecs.open(default_xml_file, 'w+', encoding='utf-8')
+    else :
+        printError("epg2xml.json 파일의 default_xml_file항목이 없습니다.");
+        sys.exit()
+elif output == "socket" :
+    if default_xml_socket :
+        try:
+            sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
+            sock.connect(default_xml_socket)
+            sockfile = sock.makefile('w+')
+            sys.stdout = sockfile
+        except socket.error:
+            printError(SOCKET_ERROR)
+            sys.exit()
+    else :
+        printError("epg2xml.json 파일의 default_xml_socket항목이 없습니다.");
+        sys.exit()
+>>>>>>> d55081a23ff89f3fd6f054ffaa612ee778ed08f2
 getEpg()

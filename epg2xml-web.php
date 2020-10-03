@@ -17,6 +17,7 @@ define("FILE_ERROR", "XML 파일을 만들수 없습니다.");
 define("SOCKET_ERROR", "소켓 파일을 찾을 수 없습니다.");
 define("JSON_FILE_ERROR", "json 파일이 없습니다.");
 define("JSON_SYNTAX_ERROR",  "json 파일 형식이 잘못되었습니다.");
+define("M3U_FILE_ERROR", "m3u 파일이 없습니다.");
 
 if(version_compare(PHP_VERSION, '5.4.45','<')) :
     printError("PHP 버전은 5.4.45 이상이어야 합니다.");
@@ -66,6 +67,29 @@ $longargs  = array(
     "help"
 );
 $args = getopt($shortargs, $longargs);
+$Playlistfile = __DIR__."/playlist.m3u";
+try {
+       $f = @file_get_contents($Playlistfile);
+       if($f == False) :
+               printError("Playlistfile.".M3U_FILE_ERROR);
+       else :
+               $channels = array();
+               foreach (explode("\n", $f) as $line) {
+                       if(substr($line, 0, 7) == "#EXTINF") :
+                               list($header, $tvgid, $tvglogo, $tvgch, $extra) = explode(" ", $line, 5);
+                               $pattern = '/tvg-id="(\d+)"/i';
+                               $replacement = '${1}';
+
+                               array_push($channels, preg_replace($pattern, $replacement, $tvgid));
+                       endif;
+               }
+               $MyDefaultChannels = implode(',', $channels);
+       endif;
+}
+catch(Exception $e) {
+    printError($e->getMessage());
+    exit;
+}
 $Settingfile = __DIR__."/epg2xml.json";
 try {
     $f = @file_get_contents($Settingfile);
@@ -77,7 +101,7 @@ try {
             $Settings = json_decode($f, TRUE);
             if(json_last_error() != JSON_ERROR_NONE) throw new Exception("epg2xml.".JSON_SYNTAX_ERROR);
             $MyISP = $Settings['MyISP'] ?: "ALL";
-            $MyChannels = isset($Settings['MyChannels']) ? $Settings['MyChannels'] : "";
+            $MyChannels = isset($Settings['MyChannels']) ? $Settings['MyChannels'] : $MyDefaultChannels;
             $default_output = $Settings['output'] ?: "d";
             $default_xml_file = $Settings['default_xml_file'] ?: "xmltv.xml";
             $default_xml_socket = $Settings['default_xml_socket'] ?: "xmltv.sock";
