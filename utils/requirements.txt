@@ -1,0 +1,4 @@
+selenium==3.141.0
+tqdm==4.36.1
+python-vlc==3.0.11115
+PyQt5==5.15.1

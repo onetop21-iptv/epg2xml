@@ -36,6 +36,7 @@ import re
 from urllib import request
 import threading
 import functools
+import copy
 
 # Function for Channel Mapping
 def read_m3u(filepath):
@@ -104,8 +105,9 @@ def vlc_log_callback(data, level, ctx, fmt, args):
             print('Disabled Channel')
 
 if len(sys.argv) < 3:
-    print('$ python %s [Recent Scanned M3U] [Used M3U]' % sys.argv[0])
+    print('$ python %s [Recent Scanned M3U] [Used M3U] [--clear]' % sys.argv[0])
     print('# M3U can be make by MCTV Playlist Creator')
+    print('# If you want to clean cache, run with --clear.')
     print('# SKBroadband Multicast Range : 239.192.38.1-239.192.150.254 [49220]')
     sys.exit(1)
 
@@ -114,7 +116,11 @@ class Player(QMainWindow):
     """
     def __init__(self, master=None):
         # Read Data
-        with open('channels.json', encoding='UTF8') as f:
+        if not os.path.exists('AllChannel.json'):
+            print('Need to generate AllChannel.json file by generate_SKB_channels.py.', file=sys.stderr)
+            sys.exit(1)
+        if '--clear' in sys.argv: os.remove('.cache')
+        with open('AllChannel.json', encoding='UTF8') as f:
             channels = dict([(_['ServiceId'], _) for _ in json.loads(f.read())])
         new_stream_db = read_m3u(sys.argv[1])
         old_stream_db = read_m3u(sys.argv[2])
@@ -257,24 +263,23 @@ class Player(QMainWindow):
 
         self.widget.setLayout(self.hboxlayout)
 
-        save = QAction("&Save", self)
-        save.triggered.connect(self.SaveFile)
-        exit = QAction("&Exit", self)
+        export = QAction("&Export", self)
+        export.triggered.connect(self.ExportFile)
+        exit = QAction("E&xit", self)
         exit.triggered.connect(sys.exit)
         menubar = self.menuBar()
         filemenu = menubar.addMenu("&File")
-        filemenu.addAction(save)
+        filemenu.addAction(export)
         filemenu.addSeparator()
         filemenu.addAction(exit)
 
         self.updatePlaylist()
 
-    def SaveFile(self):
+    def ExportFile(self):
         print(os.path.expanduser('~'))
         #filename = QFileDialog.getSaveFileName(self, "Save File", os.path.expanduser('~'),)[0]
-        filename = QFileDialog.getSaveFileName(self, "Save File", filter="M3U Playlist (*.m3u *.m3u8)",)[0]
-        print(filename)
-
+        filename = QFileDialog.getSaveFileName(self, "Export Playlist File", 'playlist.m3u', "M3U Playlist (*.m3u *.m3u8)",)[0]
+        if not filename: return
         with open(filename, 'wt', encoding='UTF8') as f:
             f.write('#EXTM3U\n')
             for item in [self.channellist.item(_) for _ in range(self.channellist.count())]:
@@ -282,6 +287,15 @@ class Player(QMainWindow):
                     data = item.data(Qt.UserRole)
                     f.write(f"#EXTINF:-1 tvg-id=\"{data['tvg-id']}\" tvg-logo=\"{data['tvg-logo']}\" tvh-chnum=\"{data['tvh-chnum']}\", {data['ch-name']}\n")
                     f.write(f"{data['multicast']}\n")
+        filename = QFileDialog.getSaveFileName(self, "Export Channel File", 'Channel.json', "JSON File (*.json)",)[0]
+        if not filename: return
+        channels = []
+        for item in [self.channellist.item(_) for _ in range(self.channellist.count())]:
+            if item.checkState():
+                data = item.data(Qt.UserRole)
+                channels.append(self.channel_info[data['tvg-id']])
+        with open(filename, 'wt', encoding='UTF8') as f:
+            f.write(json.dumps(channels, indent=2))
 
     def setVolume(self, Volume):
         """Set the volume

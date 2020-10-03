@@ -6,7 +6,8 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 options = Options()
 options.add_argument("--headless")
-driver = webdriver.Chrome('./chromedriver', options=options)
+# ref : https://chromedriver.chromium.org/downloads
+driver = webdriver.Chrome('chromedriver', options=options)
 driver.implicitly_wait(3)
 #import selenium
 
@@ -40,6 +41,6 @@ if __name__ == '__main__':
                 }
                 channel_data.append(channel_info)
                 index += 1
-    with open('Channel.json', 'wt') as f:
+    with open('AllChannel.json', 'wt') as f:
         f.write(json.dumps(channel_data, indent=2))
     print('Done.')
