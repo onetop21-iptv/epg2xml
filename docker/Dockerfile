@@ -12,6 +12,4 @@ COPY epg2xml.json .
 COPY Channel.json .
 
 VOLUME  /output
-
-ENTRYPOINT python
-CMD epg2xml.py
+ENTRYPOINT python epg2xml.py
