@@ -1,6 +1,6 @@
 [
   {
-    "Id": 2,
+    "Id": "12",
     "Name": "KBS2",
     "SKB Name": "KBS2",
     "SKBCh": 7,
@@ -9,7 +9,7 @@
     "ServiceId": "12"
   },
   {
-    "Id": 4,
+    "Id": "13",
     "Name": "MBC",
     "SKB Name": "MBC",
     "SKBCh": 11,
@@ -18,7 +18,7 @@
     "ServiceId": "13"
   },
   {
-    "Id": 1,
+    "Id": "14",
     "Name": "SBS",
     "SKB Name": "SBS",
     "SKBCh": 5,
@@ -27,7 +27,7 @@
     "ServiceId": "14"
   },
   {
-    "Id": 5,
+    "Id": "15",
     "Name": "EBS",
     "SKB Name": "EBS",
     "SKBCh": 13,
@@ -36,7 +36,7 @@
     "ServiceId": "15"
   },
   {
-    "Id": 7,
+    "Id": "63",
     "Name": "EBS2",
     "SKB Name": "EBS2",
     "SKBCh": 95,
@@ -45,7 +45,7 @@
     "ServiceId": "63"
   },
   {
-    "Id": 9,
+    "Id": "241",
     "Name": "MBN",
     "SKB Name": "MBN",
     "SKBCh": 16,
@@ -54,7 +54,7 @@
     "ServiceId": "241"
   },
   {
-    "Id": 10,
+    "Id": "242",
     "Name": "\ucc44\ub110A",
     "SKB Name": "\ucc44\ub110A",
     "SKBCh": 18,
@@ -63,7 +63,7 @@
     "ServiceId": "242"
   },
   {
-    "Id": 260,
+    "Id": "570",
     "Name": "YTN",
     "SKB Name": "YTN",
     "SKBCh": 24,
@@ -72,7 +72,7 @@
     "ServiceId": "570"
   },
   {
-    "Id": 160,
+    "Id": "321",
     "Name": "\ud604\ub300\ud648\uc1fc\ud551",
     "SKB Name": "\ud604\ub300\ud648\uc1fc\ud551",
     "SKBCh": 8,
@@ -81,7 +81,7 @@
     "ServiceId": "321"
   },
   {
-    "Id": 3,
+    "Id": "11",
     "Name": "KBS1",
     "SKB Name": "KBS1",
     "SKBCh": 9,
@@ -90,7 +90,7 @@
     "ServiceId": "11"
   },
   {
-    "Id": 69,
+    "Id": "531",
     "Name": "MBC ON",
     "SKB Name": "MBC ON",
     "SKBCh": 41,
@@ -99,7 +99,7 @@
     "ServiceId": "531"
   },
   {
-    "Id": 162,
+    "Id": "320",
     "Name": "GS SHOP",
     "SKB Name": "GS SHOP",
     "SKBCh": 12,
@@ -108,7 +108,7 @@
     "ServiceId": "320"
   },
   {
-    "Id": 11,
+    "Id": "243",
     "Name": "TV CHOSUN",
     "SKB Name": "TV CHOSUN",
     "SKBCh": 19,
@@ -117,7 +117,7 @@
     "ServiceId": "243"
   },
   {
-    "Id": 38,
+    "Id": "187",
     "Name": "OCN Movies",
     "SKB Name": "OCN Movies",
     "SKBCh": 53,
@@ -126,7 +126,7 @@
     "ServiceId": "187"
   },
   {
-    "Id": 39,
+    "Id": "178",
     "Name": "OCN",
     "SKB Name": "OCN",
     "SKBCh": 54,
@@ -135,7 +135,7 @@
     "ServiceId": "178"
   },
   {
-    "Id": 163,
+    "Id": "322",
     "Name": "NS\ud648\uc1fc\ud551",
     "SKB Name": "NS\ud648\uc1fc\ud551",
     "SKBCh": 14,
@@ -144,7 +144,7 @@
     "ServiceId": "322"
   },
   {
-    "Id": 102,
+    "Id": "250",
     "Name": "MBC M",
     "SKB Name": "MBC M",
     "SKBCh": 231,
@@ -153,7 +153,7 @@
     "ServiceId": "250"
   },
   {
-    "Id": 178,
+    "Id": "872",
     "Name": "tvN",
     "SKB Name": "tvN",
     "SKBCh": 3,
@@ -162,7 +162,7 @@
     "ServiceId": "872"
   },
   {
-    "Id": 158,
+    "Id": "327",
     "Name": "\ud648&\uc1fc\ud551",
     "SKB Name": "\ud648&\uc1fc\ud551",
     "SKBCh": 4,
@@ -171,7 +171,7 @@
     "ServiceId": "327"
   },
   {
-    "Id": 40,
+    "Id": "179",
     "Name": "OCN Thrills",
     "SKB Name": "OCN Thrills",
     "SKBCh": 55,
@@ -180,7 +180,7 @@
     "ServiceId": "179"
   },
   {
-    "Id": 187,
+    "Id": "527",
     "Name": "OtvN",
     "SKB Name": "OtvN",
     "SKBCh": 84,
@@ -189,7 +189,7 @@
     "ServiceId": "527"
   },
   {
-    "Id": 13,
+    "Id": "380",
     "Name": "\ub514\uc988\ub2c8\ucc44\ub110",
     "SKB Name": "\ub514\uc988\ub2c8\ucc44\ub110",
     "SKBCh": 171,
@@ -198,7 +198,7 @@
     "ServiceId": "380"
   },
   {
-    "Id": 82,
+    "Id": "426",
     "Name": "On style",
     "SKB Name": "On style",
     "SKBCh": 210,
@@ -207,7 +207,7 @@
     "ServiceId": "426"
   },
   {
-    "Id": 101,
+    "Id": "883",
     "Name": "SBS MTV",
     "SKB Name": "SBS MTV",
     "SKBCh": 230,
@@ -216,7 +216,7 @@
     "ServiceId": "883"
   },
   {
-    "Id": 131,
+    "Id": "132",
     "Name": "KBSN \uc2a4\ud3ec\uce20",
     "SKB Name": "KBSN \uc2a4\ud3ec\uce20",
     "SKBCh": 121,
@@ -225,7 +225,7 @@
     "ServiceId": "132"
   },
   {
-    "Id": 6,
+    "Id": "70",
     "Name": "OBS*",
     "SKB Name": "OBS*",
     "SKBCh": 20,
@@ -234,7 +234,7 @@
     "ServiceId": "70"
   },
   {
-    "Id": 191,
+    "Id": "884",
     "Name": "K star",
     "SKB Name": "K star",
     "SKBCh": 88,
@@ -243,7 +243,7 @@
     "ServiceId": "884"
   },
   {
-    "Id": 161,
+    "Id": "323",
     "Name": "\ub86f\ub370\ud648\uc1fc\ud551",
     "SKB Name": "\ub86f\ub370\ud648\uc1fc\ud551",
     "SKBCh": 10,
@@ -252,7 +252,7 @@
     "ServiceId": "323"
   },
   {
-    "Id": 184,
+    "Id": "880",
     "Name": "KBS joy",
     "SKB Name": "KBS joy",
     "SKBCh": 80,
@@ -261,7 +261,7 @@
     "ServiceId": "880"
   },
   {
-    "Id": 140,
+    "Id": "133",
     "Name": "SBS GOLF",
     "SKB Name": "SBS GOLF",
     "SKBCh": 131,
@@ -270,7 +270,7 @@
     "ServiceId": "133"
   },
   {
-    "Id": 188,
+    "Id": "185",
     "Name": "XtvN",
     "SKB Name": "XtvN",
     "SKBCh": 85,
@@ -279,7 +279,7 @@
     "ServiceId": "185"
   },
   {
-    "Id": 130,
+    "Id": "125",
     "Name": "SPOTV",
     "SKB Name": "SPOTV",
     "SKBCh": 120,
@@ -288,7 +288,7 @@
     "ServiceId": "125"
   },
   {
-    "Id": 8,
+    "Id": "240",
     "Name": "JTBC",
     "SKB Name": "JTBC",
     "SKBCh": 15,
@@ -297,7 +297,7 @@
     "ServiceId": "240"
   },
   {
-    "Id": 159,
+    "Id": "324",
     "Name": "CJ\uc624\uc1fc\ud551",
     "SKB Name": "CJ\uc624\uc1fc\ud551",
     "SKBCh": 6,
@@ -306,7 +306,7 @@
     "ServiceId": "324"
   },
   {
-    "Id": 133,
+    "Id": "131",
     "Name": "MBC Sports+",
     "SKB Name": "MBC Sports+",
     "SKBCh": 123,
@@ -315,7 +315,7 @@
     "ServiceId": "131"
   },
   {
-    "Id": 141,
+    "Id": "127",
     "Name": "JTBC GOLF",
     "SKB Name": "JTBC GOLF",
     "SKBCh": 132,
@@ -324,7 +324,7 @@
     "ServiceId": "127"
   },
   {
-    "Id": 132,
+    "Id": "130",
     "Name": "SBS Sports",
     "SKB Name": "SBS Sports",
     "SKBCh": 122,
@@ -333,7 +333,7 @@
     "ServiceId": "130"
   },
   {
-    "Id": 170,
+    "Id": "340",
     "Name": "CJ\uc624\uc1fc\ud551 \ud50c\ub7ec\uc2a4",
     "SKB Name": "CJ\uc624\uc1fc\ud551 \ud50c\ub7ec\uc2a4",
     "SKBCh": 33,
@@ -342,7 +342,7 @@
     "ServiceId": "340"
   },
   {
-    "Id": 166,
+    "Id": "339",
     "Name": "\uc2e0\uc138\uacc4\uc1fc\ud551",
     "SKB Name": "\uc2e0\uc138\uacc4\uc1fc\ud551",
     "SKBCh": 22,
@@ -351,7 +351,7 @@
     "ServiceId": "339"
   },
   {
-    "Id": 175,
+    "Id": "221",
     "Name": "\uad6d\ud68c\ubc29\uc1a1",
     "SKB Name": "\uad6d\ud68c\ubc29\uc1a1",
     "SKBCh": 291,
@@ -360,7 +360,7 @@
     "ServiceId": "221"
   },
   {
-    "Id": 57,
+    "Id": "520",
     "Name": "\ucc44\ub110\ucc28\uc774\ub098",
     "SKB Name": "\ucc44\ub110\ucc28\uc774\ub098",
     "SKBCh": 108,
@@ -369,7 +369,7 @@
     "ServiceId": "520"
   },
   {
-    "Id": 164,
+    "Id": "345",
     "Name": "SK stoa",
     "SKB Name": "SK stoa",
     "SKBCh": 17,
@@ -378,7 +378,7 @@
     "ServiceId": "345"
   },
   {
-    "Id": 174,
+    "Id": "222",
     "Name": "KTV",
     "SKB Name": "KTV",
     "SKBCh": 290,
@@ -387,7 +387,7 @@
     "ServiceId": "222"
   },
   {
-    "Id": 117,
+    "Id": "283",
     "Name": "OLIFE",
     "SKB Name": "OLIFE",
     "SKBCh": 246,
@@ -396,7 +396,7 @@
     "ServiceId": "283"
   },
   {
-    "Id": 55,
+    "Id": "177",
     "Name": "Asia N",
     "SKB Name": "Asia N",
     "SKBCh": 106,
@@ -405,7 +405,7 @@
     "ServiceId": "177"
   },
   {
-    "Id": 172,
+    "Id": "341",
     "Name": "NS Shop+",
     "SKB Name": "NS Shop+",
     "SKBCh": 37,
@@ -414,7 +414,7 @@
     "ServiceId": "341"
   },
   {
-    "Id": 115,
+    "Id": "273",
     "Name": "FISHING TV",
     "SKB Name": "FISHING TV",
     "SKBCh": 244,
@@ -423,7 +423,7 @@
     "ServiceId": "273"
   },
   {
-    "Id": 171,
+    "Id": "342",
     "Name": "W\uc1fc\ud551",
     "SKB Name": "W\uc1fc\ud551",
     "SKBCh": 35,
@@ -432,7 +432,7 @@
     "ServiceId": "342"
   },
   {
-    "Id": 73,
+    "Id": "170",
     "Name": "\ub514\uc6d0",
     "SKB Name": "\ub514\uc6d0",
     "SKBCh": 45,
@@ -441,7 +441,7 @@
     "ServiceId": "170"
   },
   {
-    "Id": 241,
+    "Id": "620",
     "Name": "\ud1a0\ub9c8\ud1a0TV",
     "SKB Name": "\ud1a0\ub9c8\ud1a0TV",
     "SKBCh": 150,
@@ -450,7 +450,7 @@
     "ServiceId": "620"
   },
   {
-    "Id": 90,
+    "Id": "423",
     "Name": "OBSW",
     "SKB Name": "OBSW",
     "SKBCh": 219,
@@ -459,7 +459,7 @@
     "ServiceId": "423"
   },
   {
-    "Id": 168,
+    "Id": "343",
     "Name": "GS MY SHOP",
     "SKB Name": "GS MY SHOP",
     "SKBCh": 29,
@@ -468,7 +468,7 @@
     "ServiceId": "343"
   },
   {
-    "Id": 58,
+    "Id": "173",
     "Name": "\ud154\ub808\ub178\ubca8\ub77c",
     "SKB Name": "\ud154\ub808\ub178\ubca8\ub77c",
     "SKBCh": 109,
@@ -477,7 +477,7 @@
     "ServiceId": "173"
   },
   {
-    "Id": 157,
+    "Id": "332",
     "Name": "\uacf5\uc601\uc1fc\ud551",
     "SKB Name": "\uacf5\uc601\uc1fc\ud551",
     "SKBCh": 2,
@@ -486,7 +486,7 @@
     "ServiceId": "332"
   },
   {
-    "Id": 222,
+    "Id": "432",
     "Name": "\ud5ec\uc2a4\uba54\ub514TV",
     "SKB Name": "\ud5ec\uc2a4\uba54\ub514TV",
     "SKBCh": 268,
@@ -495,7 +495,7 @@
     "ServiceId": "432"
   },
   {
-    "Id": 33,
+    "Id": "372",
     "Name": "EBS KIDS",
     "SKB Name": "EBS KIDS",
     "SKBCh": 194,
@@ -504,7 +504,7 @@
     "ServiceId": "372"
   },
   {
-    "Id": 224,
+    "Id": "427",
     "Name": "\uc544\ub9ac\ub791TV",
     "SKB Name": "\uc544\ub9ac\ub791TV",
     "SKBCh": 270,
@@ -513,7 +513,7 @@
     "ServiceId": "427"
   },
   {
-    "Id": 165,
+    "Id": "333",
     "Name": "K\uc1fc\ud551",
     "SKB Name": "K\uc1fc\ud551",
     "SKBCh": 21,
@@ -522,7 +522,7 @@
     "ServiceId": "333"
   },
   {
-    "Id": 261,
+    "Id": "326",
     "Name": "B tv",
     "SKB Name": "B tv",
     "SKBCh": 0,
@@ -531,7 +531,7 @@
     "ServiceId": "326"
   },
   {
-    "Id": 262,
+    "Id": "325",
     "Name": "B tv",
     "SKB Name": "B tv",
     "SKBCh": 50,
@@ -540,7 +540,7 @@
     "ServiceId": "325"
   },
   {
-    "Id": 176,
+    "Id": "220",
     "Name": "OUN",
     "SKB Name": "OUN",
     "SKBCh": 292,
@@ -549,7 +549,7 @@
     "ServiceId": "220"
   },
   {
-    "Id": 214,
+    "Id": "430",
     "Name": "\ub0b4\uc154\ub110\uc9c0\uc624\uadf8\ub798\ud53d",
     "SKB Name": "\ub0b4\uc154\ub110\uc9c0\uc624\uadf8\ub798\ud53d",
     "SKBCh": 260,
@@ -558,7 +558,7 @@
     "ServiceId": "430"
   },
   {
-    "Id": 114,
+    "Id": "530",
     "Name": "FTV",
     "SKB Name": "FTV",
     "SKBCh": 243,
@@ -567,7 +567,7 @@
     "ServiceId": "530"
   },
   {
-    "Id": 216,
+    "Id": "422",
     "Name": "YTN \uc0ac\uc774\uc5b8\uc2a4",
     "SKB Name": "YTN \uc0ac\uc774\uc5b8\uc2a4",
     "SKBCh": 262,
@@ -576,7 +576,7 @@
     "ServiceId": "422"
   },
   {
-    "Id": 245,
+    "Id": "622",
     "Name": "\ud30d\uc2a4\uacbd\uc81cTV",
     "SKB Name": "\ud30d\uc2a4\uacbd\uc81cTV",
     "SKBCh": 154,
@@ -585,7 +585,7 @@
     "ServiceId": "622"
   },
   {
-    "Id": 72,
+    "Id": "128",
     "Name": "EDGE TV",
     "SKB Name": "EDGE TV",
     "SKBCh": 44,
@@ -594,7 +594,7 @@
     "ServiceId": "128"
   },
   {
-    "Id": 169,
+    "Id": "344",
     "Name": "\ub86f\ub370OneTV",
     "SKB Name": "\ub86f\ub370OneTV",
     "SKBCh": 31,
@@ -603,7 +603,7 @@
     "ServiceId": "344"
   },
   {
-    "Id": 41,
+    "Id": "192",
     "Name": "Screen",
     "SKB Name": "Screen",
     "SKBCh": 56,
@@ -612,7 +612,7 @@
     "ServiceId": "192"
   },
   {
-    "Id": 137,
+    "Id": "424",
     "Name": "SPOTV2",
     "SKB Name": "SPOTV2",
     "SKBCh": 128,
@@ -621,7 +621,7 @@
     "ServiceId": "424"
   },
   {
-    "Id": 206,
+    "Id": "723",
     "Name": "CGNTV",
     "SKB Name": "CGNTV",
     "SKBCh": 302,
@@ -630,7 +630,7 @@
     "ServiceId": "723"
   },
   {
-    "Id": 147,
+    "Id": "120",
     "Name": "Eurosport",
     "SKB Name": "Eurosport",
     "SKBCh": 138,
@@ -639,7 +639,7 @@
     "ServiceId": "120"
   },
   {
-    "Id": 212,
+    "Id": "278",
     "Name": "STB \uc0c1\uc0dd\ubc29\uc1a1",
     "SKB Name": "STB \uc0c1\uc0dd\ubc29\uc1a1",
     "SKBCh": 308,
@@ -648,7 +648,7 @@
     "ServiceId": "278"
   },
   {
-    "Id": 103,
+    "Id": "671",
     "Name": "GMTV",
     "SKB Name": "GMTV",
     "SKBCh": 232,
@@ -657,7 +657,7 @@
     "ServiceId": "671"
   },
   {
-    "Id": 208,
+    "Id": "721",
     "Name": "C\ucc44\ub110",
     "SKB Name": "C\ucc44\ub110",
     "SKBCh": 304,
@@ -666,7 +666,7 @@
     "ServiceId": "721"
   },
   {
-    "Id": 227,
+    "Id": "281",
     "Name": "MBC NET",
     "SKB Name": "MBC NET",
     "SKBCh": 274,
@@ -675,7 +675,7 @@
     "ServiceId": "281"
   },
   {
-    "Id": 136,
+    "Id": "134",
     "Name": "SPOTV Golf&Health",
     "SKB Name": "SPOTV Golf&Health",
     "SKBCh": 127,
@@ -684,7 +684,7 @@
     "ServiceId": "134"
   },
   {
-    "Id": 209,
+    "Id": "726",
     "Name": "BTN \ubd88\uad50TV",
     "SKB Name": "BTN \ubd88\uad50TV",
     "SKBCh": 305,
@@ -693,7 +693,7 @@
     "ServiceId": "726"
   },
   {
-    "Id": 173,
+    "Id": "337",
     "Name": "\ud604\ub300\ud648\uc1fc\ud551+Shop",
     "SKB Name": "\ud604\ub300\ud648\uc1fc\ud551+Shop",
     "SKBCh": 39,
@@ -702,7 +702,7 @@
     "ServiceId": "337"
   },
   {
-    "Id": 204,
+    "Id": "727",
     "Name": "CBS",
     "SKB Name": "CBS",
     "SKBCh": 300,
@@ -711,7 +711,7 @@
     "ServiceId": "727"
   },
   {
-    "Id": 167,
+    "Id": "336",
     "Name": "\uc1fc\ud551\uc5d4\ud2f0",
     "SKB Name": "\uc1fc\ud551\uc5d4\ud2f0",
     "SKBCh": 25,
@@ -720,7 +720,7 @@
     "ServiceId": "336"
   },
   {
-    "Id": 205,
+    "Id": "725",
     "Name": "CTS",
     "SKB Name": "CTS",
     "SKBCh": 301,
@@ -729,7 +729,7 @@
     "ServiceId": "725"
   },
   {
-    "Id": 32,
+    "Id": "370",
     "Name": "bravo kids",
     "SKB Name": "bravo kids",
     "SKBCh": 193,
@@ -738,7 +738,7 @@
     "ServiceId": "370"
   },
   {
-    "Id": 210,
+    "Id": "722",
     "Name": "BBS \ubd88\uad50\ubc29\uc1a1",
     "SKB Name": "BBS \ubd88\uad50\ubc29\uc1a1",
     "SKBCh": 306,
@@ -747,7 +747,7 @@
     "ServiceId": "722"
   },
   {
-    "Id": 207,
+    "Id": "720",
     "Name": "Good TV",
     "SKB Name": "Good TV",
     "SKBCh": 303,
@@ -756,7 +756,7 @@
     "ServiceId": "720"
   },
   {
-    "Id": 83,
+    "Id": "274",
     "Name": "Fashion N",
     "SKB Name": "Fashion N",
     "SKBCh": 211,
@@ -765,7 +765,7 @@
     "ServiceId": "274"
   },
   {
-    "Id": 156,
+    "Id": "823",
     "Name": "edu TV",
     "SKB Name": "edu TV",
     "SKBCh": 205,
@@ -774,7 +774,7 @@
     "ServiceId": "823"
   },
   {
-    "Id": 177,
+    "Id": "223",
     "Name": "\ubcf5\uc9c0TV",
     "SKB Name": "\ubcf5\uc9c0TV",
     "SKBCh": 293,
@@ -783,7 +783,7 @@
     "ServiceId": "223"
   },
   {
-    "Id": 219,
+    "Id": "472",
     "Name": "BBC earth",
     "SKB Name": "BBC earth",
     "SKBCh": 265,
@@ -792,7 +792,7 @@
     "ServiceId": "472"
   },
   {
-    "Id": 81,
+    "Id": "259",
     "Name": "JTBC4",
     "SKB Name": "JTBC4",
     "SKBCh": 82,
@@ -801,7 +801,7 @@
     "ServiceId": "259"
   },
   {
-    "Id": 211,
+    "Id": "724",
     "Name": "\uac00\ud1a8\ub9ad\ud3c9\ud654\ubc29\uc1a1",
     "SKB Name": "\uac00\ud1a8\ub9ad\ud3c9\ud654\ubc29\uc1a1",
     "SKBCh": 307,
@@ -810,7 +810,7 @@
     "ServiceId": "724"
   },
   {
-    "Id": 155,
+    "Id": "821",
     "Name": "EBS +2",
     "SKB Name": "EBS +2",
     "SKBCh": 204,
@@ -819,7 +819,7 @@
     "ServiceId": "821"
   },
   {
-    "Id": 213,
+    "Id": "270",
     "Name": "\uc6d0\uc74c\ubc29\uc1a1",
     "SKB Name": "\uc6d0\uc74c\ubc29\uc1a1",
     "SKBCh": 309,
@@ -828,7 +828,7 @@
     "ServiceId": "270"
   },
   {
-    "Id": 153,
+    "Id": "822",
     "Name": "EBS English",
     "SKB Name": "EBS English",
     "SKBCh": 202,
@@ -837,7 +837,7 @@
     "ServiceId": "822"
   },
   {
-    "Id": 251,
+    "Id": "778",
     "Name": "BBC World News",
     "SKB Name": "BBC World News",
     "SKBCh": 160,
@@ -846,7 +846,7 @@
     "ServiceId": "778"
   },
   {
-    "Id": 256,
+    "Id": "621",
     "Name": "\ubd80\ub3d9\uc0b0\ud1a0\ub9c8\ud1a0",
     "SKB Name": "\ubd80\ub3d9\uc0b0\ud1a0\ub9c8\ud1a0",
     "SKBCh": 165,
@@ -855,7 +855,7 @@
     "ServiceId": "621"
   },
   {
-    "Id": 24,
+    "Id": "387",
     "Name": "\ubf40\uc694TV",
     "SKB Name": "\ubf40\uc694TV",
     "SKBCh": 182,
@@ -864,7 +864,7 @@
     "ServiceId": "387"
   },
   {
-    "Id": 48,
+    "Id": "202",
     "Name": "World Classic Movie",
     "SKB Name": "World Classic Movie",
     "SKBCh": 63,
@@ -873,7 +873,7 @@
     "ServiceId": "202"
   },
   {
-    "Id": 60,
+    "Id": "203",
     "Name": "ApleDrama",
     "SKB Name": "ApleDrama",
     "SKBCh": 111,
@@ -882,7 +882,7 @@
     "ServiceId": "203"
   },
   {
-    "Id": 61,
+    "Id": "204",
     "Name": "WeLike",
     "SKB Name": "WeLike",
     "SKBCh": 112,
@@ -891,7 +891,7 @@
     "ServiceId": "204"
   },
   {
-    "Id": 125,
+    "Id": "269",
     "Name": "\uc544\uc774\ub137\ub77c\uc774\ud504",
     "SKB Name": "\uc544\uc774\ub137\ub77c\uc774\ud504",
     "SKBCh": 254,
@@ -900,7 +900,7 @@
     "ServiceId": "269"
   },
   {
-    "Id": 126,
+    "Id": "249",
     "Name": "\ubd90TV",
     "SKB Name": "\ubd90TV",
     "SKBCh": 255,
@@ -909,7 +909,7 @@
     "ServiceId": "249"
   },
   {
-    "Id": 127,
+    "Id": "897",
     "Name": "ETN\uc5f0\uc608TV",
     "SKB Name": "ETN\uc5f0\uc608TV",
     "SKBCh": 256,
@@ -918,7 +918,7 @@
     "ServiceId": "897"
   },
   {
-    "Id": 138,
+    "Id": "123",
     "Name": "IB Sports",
     "SKB Name": "IB Sports",
     "SKBCh": 129,
@@ -927,7 +927,7 @@
     "ServiceId": "123"
   },
   {
-    "Id": 145,
+    "Id": "265",
     "Name": "Afreeca TV",
     "SKB Name": "Afreeca TV",
     "SKBCh": 136,
@@ -936,7 +936,7 @@
     "ServiceId": "265"
   },
   {
-    "Id": 154,
+    "Id": "820",
     "Name": "EBS +1",
     "SKB Name": "EBS +1",
     "SKBCh": 203,
@@ -945,7 +945,7 @@
     "ServiceId": "820"
   },
   {
-    "Id": 186,
+    "Id": "896",
     "Name": "SBS F!L",
     "SKB Name": "SBS F!L",
     "SKBCh": 83,
@@ -954,7 +954,7 @@
     "ServiceId": "896"
   },
   {
-    "Id": 259,
+    "Id": "571",
     "Name": "\uc5f0\ud569\ub274\uc2a4TV",
     "SKB Name": "\uc5f0\ud569\ub274\uc2a4TV",
     "SKBCh": 23,
@@ -963,7 +963,7 @@
     "ServiceId": "571"
   },
   {
-    "Id": 44,
+    "Id": "198",
     "Name": "The Movie",
     "SKB Name": "The Movie",
     "SKBCh": 59,

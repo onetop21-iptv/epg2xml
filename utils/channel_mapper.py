@@ -44,7 +44,7 @@ def read_m3u(filepath):
     with open(filepath, encoding='UTF8') as f:
         stream_info = None
         extinf_pattern = re.compile('#EXTINF:[\-0-9]+(.*),(.*)$')
-        attr_pattern = re.compile('tvg-id=\"([0-9]+)\" tvg-logo=\"([0-9A-Za-z.:/_?=]+)\" tvg-chno=\"[0-9]+\" tvh-chnum=\"([0-9]+)\"')
+        attr_pattern = re.compile('tvg-id=\"([0-9]+)\" tvg-logo=\"([0-9A-Za-z.:/_?=]+)\" .*tvh-chnum=\"([0-9]+)\"')
         for line in f.readlines():
             if line.startswith('#EXTM3U'):
                 pass
@@ -61,6 +61,7 @@ def read_m3u(filepath):
                     'tvh-chnum': tvh_chnum.strip(),
                     'ch-name': ch_name.strip(),
                 }
+                print(stream_info)
             elif line.startswith('udp://'):
                 stream_info['multicast'] = line.strip('\r\n')
                 stream_db.append(stream_info)
