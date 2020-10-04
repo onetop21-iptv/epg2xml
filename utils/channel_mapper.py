@@ -44,7 +44,7 @@ def read_m3u(filepath):
     with open(filepath, encoding='UTF8') as f:
         stream_info = None
         extinf_pattern = re.compile('#EXTINF:[\-0-9]+(.*),(.*)$')
-        attr_pattern = re.compile('tvg-id=\"([0-9]+)\" tvg-logo=\"([0-9A-Za-z.:/_?=]+)\" tvh-chnum=\"([0-9]+)\"')
+        attr_pattern = re.compile('tvg-id=\"([0-9]+)\" tvg-logo=\"([0-9A-Za-z.:/_?=]+)\" tvg-chno=\"[0-9]+\" tvh-chnum=\"([0-9]+)\"')
         for line in f.readlines():
             if line.startswith('#EXTM3U'):
                 pass
@@ -285,7 +285,7 @@ class Player(QMainWindow):
             for item in [self.channellist.item(_) for _ in range(self.channellist.count())]:
                 if item.checkState():
                     data = item.data(Qt.UserRole)
-                    f.write(f"#EXTINF:-1 tvg-id=\"{data['tvg-id']}\" tvg-logo=\"{data['tvg-logo']}\" tvh-chnum=\"{data['tvh-chnum']}\", {data['ch-name']}\n")
+                    f.write(f"#EXTINF:-1 tvg-id=\"{data['tvg-id']}\" tvg-logo=\"{data['tvg-logo']}\" tvg-chno=\"{data['tvh-chnum']}\" tvh-chnum=\"{data['tvh-chnum']}\", {data['ch-name']}\n")
                     f.write(f"{data['multicast']}\n")
         filename = QFileDialog.getSaveFileName(self, "Export Channel File", 'Channel.json', "JSON File (*.json)",)[0]
         if not filename: return

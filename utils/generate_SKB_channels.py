@@ -31,7 +31,8 @@ if __name__ == '__main__':
                 ch_name = chname.text
                 service_id = group[1]
                 channel_info = {
-                    'Id': index,
+                    # 추후 tvg-id로 사용되는 값으로 채널마다 고정된 unique값을 갖는 것이 좋기 때문에 Service ID를 사용
+                    'Id': service_id,
                     'Name': ch_name,
                     'SKB Name': ch_name,
                     'SKBCh': ch_num,
