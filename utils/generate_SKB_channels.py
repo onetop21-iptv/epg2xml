@@ -15,11 +15,10 @@ BASE_URL = 'https://m.skbroadband.com/content/realtime/Realtime_List.do'
 # Example : https://m.skbroadband.com/content/realtime/Channel_List.do?key_depth1=5100&key_depth2=14&key_depth4=PM50305785
 sid_pattern = re.compile('.*key_depth2=([0-9]+)')
 
-if __name__ == '__main__':
+def get_channels():
     channel_data = []
     driver.get(BASE_URL)
     categories = driver.find_elements_by_xpath('//*[@id="channel-list"]/div')
-    index = 1
     for category in categories:
         channels = category.find_elements_by_xpath('.//div[2]/table/tbody/tr')
         for channel in channels:
@@ -32,7 +31,7 @@ if __name__ == '__main__':
                 service_id = group[1]
                 channel_info = {
                     # 추후 tvg-id로 사용되는 값으로 채널마다 고정된 unique값을 갖는 것이 좋기 때문에 Service ID를 사용
-                    'Id': service_id,
+                    'Id': int(service_id),
                     'Name': ch_name,
                     'SKB Name': ch_name,
                     'SKBCh': ch_num,
@@ -41,7 +40,11 @@ if __name__ == '__main__':
                     'ServiceId': service_id
                 }
                 channel_data.append(channel_info)
-                index += 1
+    return channel_data
+
+if __name__ == '__main__':
+    print('Generate Channel Data...')
+    channel_data = get_channels()
     with open('AllChannel.json', 'wt') as f:
         f.write(json.dumps(channel_data, indent=2))
     print('Done.')

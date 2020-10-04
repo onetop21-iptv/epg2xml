@@ -116,13 +116,18 @@ class Player(QMainWindow):
     """A simple Media Player using VLC and Qt
     """
     def __init__(self, master=None):
+        if '--clear' in sys.argv: os.remove('.cache')
         # Read Data
         if not os.path.exists('AllChannel.json'):
-            print('Need to generate AllChannel.json file by generate_SKB_channels.py.', file=sys.stderr)
-            sys.exit(1)
-        if '--clear' in sys.argv: os.remove('.cache')
-        with open('AllChannel.json', encoding='UTF8') as f:
-            channels = dict([(_['ServiceId'], _) for _ in json.loads(f.read())])
+            print('Reffering channel info from server.')
+            print('If you want to customize channel data, generate AllChannel.json file by generate_SKB_channels.py.', file=sys.stderr)
+            from generate_SKB_channels import get_channels
+            channels = dict([(_['ServiceId'], _) for _ in get_channels()])
+        else:
+            print('Using AllChannel.json for referring channel info.')
+            with open('AllChannel.json', encoding='UTF8') as f:
+                channels = dict([(_['ServiceId'], _) for _ in json.loads(f.read())])
+
         new_stream_db = read_m3u(sys.argv[1])
         old_stream_db = read_m3u(sys.argv[2])
 
